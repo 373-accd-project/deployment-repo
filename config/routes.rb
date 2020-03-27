@@ -5,4 +5,5 @@ Rails.application.routes.draw do
 
   get 'home' => 'home#index', as: :home
   post "home", to: "home#index"
+  post "download_csv", to: "home#download_csv"
 end
