@@ -6,7 +6,7 @@
   <%= select_tag(:industry, options_for_select(@industries)) %><br/><br/>
   <%= select_tag(:ownership, options_for_select(@ownership)) %><br/><br/>
   <%= select_tag(:size, options_for_select(@sizes)) %><br/>
-  <%= text_field_tag(:series_id) %>
+  <%= text_field_tag(:year) %>
   <%= submit_tag("submit") %>
 <% end %>
 <%= form_tag("/download_csv") do %>
@@ -19,8 +19,6 @@
       <%= message %><br />
     <% end %>
   <% end %>
-  <% puts "Request:" %>
-  <% puts @reply %>
   <% if !@reply['Results']['series'][0]['data'].blank? %>
   <table class="table">
   <thead>
