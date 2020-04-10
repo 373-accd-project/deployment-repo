@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Dataquery</title>
-    <%= csrf_meta_tags %>
-    <%# <%= csp_meta_tag %>
-    <%= stylesheet_link_tag "application", media: "all" %>
-    <%= javascript_include_tag "application" %>
-  </head>
+<head>
+  <title>Dataquery</title>
+  <%= csrf_meta_tags %>
+  <%# <%= csp_meta_tag %>
+  <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track' => true %>
+</head>
 
-  <body>
-    <%= render 'navbar/navbar' %>
-    <div id = "container">
+<body>
+  <%= render 'navbar/navbar' %>
+  <div id = "container">
     <%= yield %>
-    </div>
-  </body>
+  </div>
+</body>
 </html>
