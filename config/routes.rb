@@ -3,8 +3,11 @@ Rails.application.routes.draw do
   # resources :home
   root 'welcome#index'
 
-  get 'home' => 'home#index', as: :home
+  get 'home', to: 'home#index'
   post "home", to: "home#index"
-  get 'qcew', to: "qcew#index"
   post "download_csv", to: "home#download_csv"
+
+  #  QCEW Routes
+  get 'qcew', to: "qcew#index"
+  post 'qcew', to: "qcew#index"
 end
